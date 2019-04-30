@@ -1,0 +1,201 @@
+// Colors
+$blue-primary: #273261;
+$blue-text: #283054;
+$yellow-primary: #f5d608;
+
+@import "nav";
+@import "landing";
+@import "footer";
+@import "courses";
+@import "faculty";
+@import "contact";
+@import "admission";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $blue-text;
+  line-height: 1.5;
+}
+
+*,
+.no-margin {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.25em;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  // transition: all 0.5s ease;
+}
+
+a.btn:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+// Font Size
+h1 {
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 57px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  // Used in Footer
+  font-size: 24px;
+  font-weight: normal;
+}
+
+p,
+li {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.link {
+  border-bottom: $blue-text 3px solid;
+  font-weight: 700;
+  color: $blue-text;
+  transition: all 0.3s;
+
+  &:hover {
+    color: lighten($blue-text, 20);
+    border-bottom: lighten($blue-text, 20) 3px solid;
+  }
+}
+
+//
+.wrapper {
+  padding-left: 6%;
+  padding-right: 6%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+section {
+  padding-top: 1rem;
+}
+
+// Buttons
+.btn {
+  border-radius: 1000px;
+  font-size: 18px;
+  padding: 8px 1.3rem;
+  display: inline-block;
+  transition: background 0.2s ease;
+
+  &-primary {
+    background: $yellow-primary;
+    color: $blue-primary;
+    font-weight: 700;
+
+    &:hover {
+      border-bottom: none;
+      background: lighten($yellow-primary, 10);
+    }
+  }
+
+  &-secondary {
+    background: $blue-primary;
+    color: white;
+    font-weight: 600;
+
+    &:hover {
+      background: lighten($blue-primary, 10);
+    }
+  }
+}
+
+#nav__btn-primary {
+  color: $blue-primary;
+}
+
+// For Spacing Header
+.header__h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// Lists
+.list {
+  padding-bottom: 1rem;
+  list-style-position: inside;
+  max-width: 70%;
+
+  li:not(:last-child) {
+    padding-bottom: 0.7rem;
+  }
+}
+
+// Mobile
+@media (max-width: 1024px) {
+  .list {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 39px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .special__h3 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+
+  *,
+  .btn {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    // padding: 0% 8%;
+  }
+
+  .unordered_list {
+    padding-left: 20px;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .list {
+    max-width: 100%;
+  }
+}

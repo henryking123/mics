@@ -1,0 +1,102 @@
+.faculty {
+  // Header Part
+  &__header {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+
+    &__profile {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__photo {
+      width: 100%;
+      border-radius: 100%;
+
+      &-section {
+        max-width: 300px;
+      }
+    }
+
+    &__statement {
+      flex: 2;
+      padding-top: 3%;
+      padding-left: 1rem;
+    }
+
+    &__paragraph {
+      max-width: 90%;
+      text-indent: 1.5rem;
+    }
+  }
+
+  // Main Part
+
+  // For Each Faculty
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__main {
+    display: grid;
+    grid-gap: 1.5rem 0.4rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 100%;
+
+    &-section {
+      width: 90%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .faculty {
+    &__header {
+      flex-direction: column;
+
+      &__statement {
+        padding-left: 0;
+      }
+
+      &__paragraph {
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faculty__main {
+    grid-gap: 1rem 0.4rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .faculty {
+    &__header {
+      padding-top: 0;
+    }
+
+    &__main {
+      grid-gap: 0.8rem 0.4rem;
+    }
+
+    &__main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

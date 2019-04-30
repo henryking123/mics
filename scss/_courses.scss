@@ -1,0 +1,72 @@
+.course {
+  margin-bottom: 2rem;
+
+  &__row {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 90%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  &__property {
+    flex: 1;
+    font-weight: bold;
+  }
+
+  &__description {
+    flex: 3;
+  }
+
+  &__cta {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    hr {
+      width: 70%;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    &__content {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__button {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .course {
+    &__row {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__description {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .course__cta {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .course__title {
+    font-size: 24px;
+  }
+}

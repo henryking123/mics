@@ -1,0 +1,159 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #161e3d;
+  color: white;
+  position: relative;
+  justify-content: center;
+
+  &__background {
+    background-image: url(../img/landing_bg.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.66;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: auto;
+  }
+
+  &__h1 {
+    font-weight: normal;
+  }
+
+  &__h3 {
+    max-width: 700px;
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+    font-weight: normal;
+  }
+
+  &__buttons {
+    padding-bottom: 10%;
+    display: flex;
+  }
+}
+
+.choose-mics__h2 {
+  padding-bottom: 0.5rem;
+}
+
+// Let's hear from the students
+.students {
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 3%;
+  }
+
+  &__h2 {
+    width: 70%;
+  }
+
+  &__image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    // margin: auto;
+
+    &-section {
+      // flex: 1;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__statement {
+    max-width: 500px;
+
+    &-section {
+      // flex: 1;
+      margin-left: 3%;
+    }
+  }
+}
+
+// TESDA
+.tesda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__h3 {
+    font-weight: normal;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .students__h2 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__h3 {
+      padding-bottom: 2rem;
+      padding-top: 0.5rem;
+      max-width: 90%;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .btn:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .tesda {
+    &__h3 {
+      font-size: 16px;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+
+    &__logo {
+      max-width: 90px;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  // Let's hear from the students
+  .students {
+    &__h2 {
+      width: 90%;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__statement {
+      &-section {
+        margin: 0;
+        padding-top: 4%;
+      }
+    }
+  }
+}

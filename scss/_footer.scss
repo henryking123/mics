@@ -1,0 +1,100 @@
+footer {
+  background: $blue-primary;
+  color: white;
+  font-size: 18px;
+
+  a {
+    color: white;
+  }
+
+  li:not(:first-of-type) {
+    padding-top: 1rem;
+  }
+}
+
+.footer {
+  display: flex;
+
+  &__contact {
+    flex: 2;
+    padding-bottom: 1.5rem;
+
+    &__h4 {
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 18px;
+
+      i {
+        margin-right: 1rem;
+        width: 25px;
+        text-align: center;
+        padding-top: 0.2rem;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  &__cta {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__button {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__link {
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  background: $blue-text;
+  padding: 0.7rem 0;
+}
+
+// Resize Mobile Logo to balance visual
+.fa-mobile-alt {
+  font-size: 1.2em !important;
+}
+
+@media (max-width: 900px) {
+  .footer__cta {
+    display: none;
+    flex: 0;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .footer__contact {
+    flex: initial;
+
+    &__item i {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__contact__h4 {
+    font-size: 22px;
+  }
+  .footer__contact__item,
+  footer {
+    font-size: 16px;
+  }
+}
