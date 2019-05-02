@@ -50,11 +50,12 @@
   .nav__mask {
     position: fixed;
     z-index: 100;
-    top: 0;
     left: 0;
     overflow: hidden;
     width: 0;
-    height: 0;
+    display: none;
+    height: calc(100vh - var(--nav-height));
+    top: var(--nav-height);
     background: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 0.35s, width 0s 0.35s, height 0s 0.35s; }
@@ -63,6 +64,7 @@
     height: calc(100vh - var(--nav-height));
     top: var(--nav-height);
     opacity: 1;
+    display: block;
     transition: opacity 0.35s; }
   .nav.nav__landing {
     background: none;
