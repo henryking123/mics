@@ -5,9 +5,6 @@ const navSlide = () => {
   const navMask = document.querySelector(".nav__mask");
 
   const navTrigger = () => {
-    // Toggle Nav
-    nav.classList.toggle("nav__active");
-
     // Animate links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
@@ -25,6 +22,9 @@ const navSlide = () => {
     if (window.scrollY === 0) {
       nav.classList.toggle("nav__scrolled");
     }
+
+    // Toggle Nav
+    nav.classList.toggle("nav__active");
   };
 
   burger.addEventListener("click", () => {

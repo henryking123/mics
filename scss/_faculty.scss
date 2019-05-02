@@ -17,6 +17,7 @@
     &__photo {
       width: 100%;
       border-radius: 100%;
+      border: $blue-primary 5px solid;
 
       &-section {
         max-width: 300px;
@@ -54,6 +55,7 @@
   &__photo {
     width: 100%;
     border-radius: 100%;
+    border: $blue-primary 5px solid;
 
     &-section {
       width: 90%;
@@ -87,8 +89,16 @@
 
 @media (max-width: 500px) {
   .faculty {
+    &__photo {
+      border-width: 3px;
+    }
+
     &__header {
       padding-top: 0;
+
+      &__photo {
+        border-width: 3px;
+      }
     }
 
     &__main {
